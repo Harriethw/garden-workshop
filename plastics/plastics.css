@@ -1,13 +1,12 @@
 body {
-    align-items: center;
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 1em;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-size: 40px 40px;
-  background-image:
-    linear-gradient(to right, grey 1px, transparent 1px),
+  background-image: linear-gradient(to right, grey 1px, transparent 1px),
     linear-gradient(to bottom, grey 1px, transparent 1px);
 }
 
@@ -23,14 +22,14 @@ body {
 }
 
 footer {
-    margin-top: 2em;
-    margin-bottom: 1em;
-    padding-left: 2em;
-    width: 100%;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  padding-left: 2em;
+  width: 100%;
 }
 
 footer p {
-    padding-left: 1em;
+  padding-left: 1em;
 }
 
 .gallery {
@@ -58,13 +57,14 @@ img {
   max-width: 25vw;
 }
 
-main, footer {
+main,
+footer {
   background: radial-gradient(
     circle,
     rgb(255, 255, 255) 0%,
     rgba(143, 255, 175, 1) 100%
   );
-  max-width: 90vw;
+  width: 90vw;
   padding: 0.5em;
   border-radius: 2em;
   animation: fadeInAnimation ease-in 1s;
@@ -73,23 +73,24 @@ main, footer {
 }
 
 @keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-     }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* desktop */
 @media screen and (min-width: 1025px) {
-    main, footer {
-        max-width: 70vw;
-        padding-left: 2em;
-        padding-right: 2em;
-    }
+  main,
+  footer {
+    width: 70vw;
+    padding-left: 2em;
+    padding-right: 2em;
+  }
 
-    .gallery img {
-        max-width: 30vw;
-    }
+  .gallery img {
+    max-width: 30vw;
+  }
 }
