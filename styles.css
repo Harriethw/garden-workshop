@@ -1,9 +1,95 @@
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
+body {
+    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1em;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, grey 1px, transparent 1px),
+    linear-gradient(to bottom, grey 1px, transparent 1px);
 }
- 
+
+.description {
+  font-size: 1.3em;
+  border-left: solid darkgreen;
+  border-top-right-radius: 2em;
+  border-bottom-right-radius: 2em;
+  background: white;
+  padding: 1em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+footer {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    padding-left: 2em;
+    width: 100%;
+}
+
+footer p {
+    padding-left: 1em;
+}
+
+.gallery {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.gallery img {
+  border-radius: 5em;
+  max-width: 40vw;
+}
+
+header {
+  color: #d35400;
+  display: flex;
+  flex-direction: column;
+  font-family: "Courier New", Courier, monospace;
+}
+
 img {
-    align-self: center;
-    max-width: 25vw;
+  max-width: 25vw;
+}
+
+main, footer {
+  background: radial-gradient(
+    circle,
+    rgb(255, 255, 255) 0%,
+    rgba(143, 255, 175, 1) 100%
+  );
+  max-width: 90vw;
+  padding: 0.5em;
+  border-radius: 2em;
+  animation: fadeInAnimation ease-in 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+/* desktop */
+@media screen and (min-width: 1025px) {
+    main, footer {
+        max-width: 70vw;
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+    .gallery img {
+        max-width: 30vw;
+    }
 }
